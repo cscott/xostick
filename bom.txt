@@ -1,0 +1,27 @@
+LED option:
+5mm T-1 3/4 3.2V white:
+C535A-WJN-CS0V0231-ND $0.19 quantity 100
+
+Zener option:
+1N5226BFSCT-ND 3.3V zener, 500mW DO-35, $0.072
+568-5812-1-ND 3.3V zener, 1W, DO-35, $0.078
+
+current through the zener:
+(5-3.3V)/68ohm = 25mA = 42.5mW
+
+
+
+H1 3x2 header
+H2 10x2 header
+U1 ATtiny85  ATTINY85-20PU-ND       $0.72
+R1,R2 68ohm axial 0.3"
+R3 1.5k axial 0.3"
+D1,D2 3.3V zener  1N5226BFSCT-ND  @ $0.072
+
+optional:
+U2 ATtiny261A ATTINY261A-PU-ND    $0.84
+R4,R5 470ohm axial 0.3"
+LED1 5mm T1-3/4 754-1273-ND green $0.0798
+LED2 5mm T1-3/4 WP7113SRD/E red   $0.0853
+X2 USB mini-B WM17115-ND          $1.1038
+SW1 6mm 450-1652-ND               $0.1114
