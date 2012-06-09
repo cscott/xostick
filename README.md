@@ -1,6 +1,6 @@
 This is a simple Open Hardware peripheral for the OLPC XO-1/1.5/1.75.
 
-The files are created using Eagle 5.10.0 on Linux, and the SparkFun
+The files are created using Eagle 5.10.0 on Linux and the SparkFun
 footprint libraries.
 
 Some details about the design:
@@ -16,7 +16,7 @@ Some details about the design:
    Our solution is to put two breakaway tabs on the back of the board.  You
    can break them off and glue them below the USB fingers to make it stay in
    the port better/at all.  One gotcha is that break away PCBs tend to stress
-   nearly traces; I've tried to give them adequate clearance.  We're also
+   nearby traces; I've tried to give them adequate clearance.  We're also
    putting copper fills on the PCBs to make them thicker (thanks again, djgpp).
 4) Attempting to bring BOM below $1/student and part count down as low as
    possible as well.  As a result, we're skimping a bit on ferrites and
