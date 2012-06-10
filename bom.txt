@@ -1,25 +1,43 @@
-Bill of Materials.
+Bill of Materials (v5)
 Prices are from digikey, and in quantity 100.
 ---------------------------------------------
 
-U1 ATtiny85  ATTINY85-20PU-ND       $0.72
-R1,R2 68ohm axial 0.3" CF14JT68R0CT-ND $0.02190
-R3 1.5k axial 0.3" CF14JT1K50CT-ND  $0.02190
-D1,D2 3.3V zener  1N5226BFSCT-ND  @ $0.072
-C1 10uF  445-2863-ND                $0.21610 (5mm spacing = .196" lead spacing)
-C2 0.1uF 478-5741-ND                $0.09450 (.100" lead spacing)
+Required:
+Part     Value            Device            Package              Library  DigiKey       Price (qty 100)
+C1       10uF             CAP_POLPTH2       CPOL-RADIAL-10UF-25V SparkFun 399-6100-ND           $0.05350  (.08" lead spacing)
+C2       0.1uF            CAPPTH            CAP-PTH-SMALL        SparkFun 478-5741-ND           $0.09450 (.100" lead spacing)
+D1       3V3              DIODE-ZENERPTH    DIODE-ZENER          SparkFun 1N5226BFSCT-ND        $0.072
+D2       3V3              DIODE-ZENERPTH    DIODE-ZENER          SparkFun 1N5226BFSCT-ND        $0.072
+R1       68               RESISTORAXIAL-0.3 AXIAL-0.3            SparkFun CF14JT68R0CT-ND	$0.02190 axial 0.3"
+R2       68               RESISTORAXIAL-0.3 AXIAL-0.3            SparkFun CF14JT68R0CT-ND	$0.02190 axial 0.3"
+R3       1.5K             RESISTORAXIAL-0.3 AXIAL-0.3            SparkFun CF14JT1K50CT-ND       $0.02190 axial 0.3"
+U1       TINY85P          TINY85P           DIL08                atmel    ATTINY85-20PU-ND      $0.72
 
-optional components:
-U2 ATtiny261A ATTINY261A-PU-ND    $0.84   (instead of U1)
-H1 3x2 header  609-3218-ND          $0.1778
-H2 10x2 header 609-3221-ND          $0.4848
-R4,R5 470ohm axial 0.3" CF14JT470RCT-ND  $0.02190
-LED1 3mm T1 754-1217-ND green     $0.07150
-LED2 3mm T1 754-1218-ND red       $0.07150
-X2 USB B AE9925-ND                $0.5566
-SW1 6mm 450-1652-ND               $0.1114
+Optional I/O:
+Part     Value            Device            Package              Library  DigiKey       Price (qty 100)
+LED1     White?           LED3MM            LED3MM               SparkFun 754-1217-ND           $0.07150 3mm T1 green
+LED2     Yellow           LED3MM            LED3MM               SparkFun 754-1218-ND           $0.07150 3mm T1 red
+R4       470              RESISTORAXIAL-0.3 AXIAL-0.3            SparkFun CF14JT470RCT-ND       $0.02190 axial 0.3"
+R5       470              RESISTORAXIAL-0.3 AXIAL-0.3            SparkFun CF14JT470RCT-ND       $0.02190 axial 0.3"
+SW1      USER             TAC_SWITCHPTH     TACTILE-PTH          SparkFun 450-1652-ND           $0.1114  6mm
+
+Optional:
+Part     Value            Device            Package              Library  DigiKey       Price (qty 100)
+H1       M10X2            M10X2             2X10                 SparkFun 609-3221-ND           $0.4848
+H2       AVR_SPI_PRG_6PTH AVR_SPI_PRG_6PTH  2X3                  SparkFun 609-3218-ND           $0.1778
+U2       TINY261A         TINY26LP          DIL20                atmel    ATTINY261A-PU-ND      $0.84   (instead of U1)
+X2       USBPTH           USBPTH            USB-B-PTH            SparkFun AE9925-ND             $0.5566
+
+Other:
+Part     Value            Device            Package              Library  DigiKey       Price (qty 100)
+SJ3      AVCC             SOLDERJUMPERTRACE SJ_2S-TRACE          SparkFun 1
+SJ4      AGND             SOLDERJUMPERTRACE SJ_2S-TRACE          SparkFun 1
+X1       USBPCB           USBPCB            USB-A-PCB            SparkFun 1
 
 -- old notes --
+C1 alternate 445-2863-ND           $0.21610 (5mm spacing = .197" lead spacing)
+C2 alternate 399-5863-ND           0.08530  (5mm lead spacing = .197")
+
 Zener parameters:
 
 1N5226BFSCT-ND 3.3V zener, 500mW DO-35, $0.072
