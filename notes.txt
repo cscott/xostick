@@ -1,0 +1,22 @@
+Notes on v5:
+
+- ATtiny261A should be at least ATtiny461a if not ATtiny861a, since
+  USB library takes up 2496 bytes.
+- full size USB convert to mini or micro? (no through-hole micro-B connectors?)
+- LED1/LED2 need better polarity mark
+- use '-kit' suffixed versions of footprints (solder mask on component side)
+- break off tab appears to work well.
+- island between tabs should be anchored to body, not tabs?
+- can we avoid anchors on break off tabs, instead use central anchor?
+   ie.
+     T
+  ------------
+ |            |
+  --          \--
+ TXT|            |
+  --          \--
+ |            |
+  ------------
+     T
+where T indicates tabs.
+
