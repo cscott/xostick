@@ -20,3 +20,7 @@ Notes on v5:
      T
 where T indicates tabs.
 
+- remove symmetry from USB connector placement to allow two tabs on
+  XOrduino board.  (ie, move connector all the way down)
+  (but retain 1.9" max width and spacing between USB port and edge to
+  allow plugging XO Stick into vertical USB port on XO)
