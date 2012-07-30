@@ -1,12 +1,12 @@
 This is a simple Open Hardware peripheral for the OLPC XO-1/1.5/1.75.
 
-The files are created using Eagle 5.10.0 on Linux and the SparkFun
+The files are created using Eagle 6.2.0 on Linux and the SparkFun
 footprint libraries.
 
 Some details about the design:
 
-1) Supporting using either the ATtiny85 (lowest cost) or the ATtiny261
-   (14 I/Os, $0.12 more expensive).
+1) Supporting using either the ATtiny85 (lowest cost) or the ATtiny861
+   (14 I/Os, slightly more expensive).
 2) Based on the Sparkfun AVR Stick
     http://www.sparkfun.com/products/9147
    and thus software will be based on
@@ -18,23 +18,27 @@ Some details about the design:
    the port better/at all.  One gotcha is that break away PCBs tend to stress
    nearby traces; I've tried to give them adequate clearance.  We're also
    putting copper fills on the PCBs to make them thicker (thanks again, djgpp).
+   The PCB we have also has 4 layers, but I've routed this board with only
+   the top and bottom so that 2 layer reproductions will work just fine as
+   well.  The inner two layers are ground and power planes, which don't
+   need to be present to connect the ground and power nets.
 4) Attempting to bring BOM below $1/student and part count down as low as
    possible as well.  As a result, we're skimping a bit on ferrites and
    bypass caps.
-5) There are pads for populating a full-size USB-B connector, so you can
+5) There are pads for populating a mini USB B connector, so you can
    put this on a cable (and avoid the glue-the-PCBs-together dance).
-   Full size USB-B through hole connectors seem to be the sweet spot for
-   cost, but this means you need a different cable for the XO Stick and the
-   XOrduino (which needs to use a mini or micro connector to save PCB space).
-   Also, the USB signals will be exposed on the tabs when the connector
-   is populated.  Maybe some different trade-offs need to be made here.
-6) The XO Stick needs an external programmer.
-   a) Can we write a USB DFU bootloader using v-usb?  The chip has the
-      hardware for self-programming, dunno about code space.
-   b) Using one XO Stick to program another is a Simple Matter Of Software.
-      We should define a standard for the hardware hookup.
-   c) The XOrduino should be able to program XO Sticks as well.
-   d) Maybe a little bit of extra PCB space to support (b) and/or (c) is
-      called for?  Pads for a male ICSP programming cable, for example?
+6) The XO Stick has a standard arduino shield pinout.  This lets it be
+   piggybacked on another XO Stick for programming, or piggy backed on
+   an XOrduino to control a turtle robot.  Standard arduino shields will
+   probably *not* work, since not all pins are connected -- but they might!
+7) To program one XO Stick from another, the RST header on the target should
+   be put in the "PROG" position so that the programmer (either an XOrduino
+   or XO Stick) can drive it via arduino pin 12.
+8) The XO Stick currently needs an external programmer.
+   Can we write a USB DFU bootloader using v-usb?
+      Something like:
+        http://www.obdev.at/products/vusb/usbasploader.html
+        http://embedded-creations.com/projects/attiny85-usb-bootloader-overview/
+        https://github.com/embedded-creations/USBaspLoader-tiny85
 
-  -- C. Scott Ananian, 2012-06-09
+  -- C. Scott Ananian, 2012-06-09; revised 2012-07-30
