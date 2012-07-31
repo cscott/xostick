@@ -1,3 +1,7 @@
+Notes on v9:
+- usb connector up toward notch a little bit?  binding on bottom side.
+  (moved 10 mil up for v10, chamfered bottom corner as well)
+
 Notes on v5:
 
 - ATtiny261A should be at least ATtiny461a if not ATtiny861a, since
