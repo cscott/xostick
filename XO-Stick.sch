@@ -5999,13 +5999,13 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <wire x1="-3.25" y1="1.25" x2="1.75" y2="0.75" width="0.127" layer="51"/>
 <wire x1="1.75" y1="0.75" x2="1.75" y2="-0.75" width="0.127" layer="51"/>
 <wire x1="1.75" y1="-0.75" x2="-3.25" y2="-1.25" width="0.127" layer="51"/>
-<pad name="VBUS" x="5.1" y="1.6" drill="0.8" diameter="1.143"/>
-<pad name="D+" x="5.1" y="0" drill="0.8" diameter="1.143"/>
-<pad name="GND" x="5.1" y="-1.6" drill="0.8" diameter="1.143"/>
-<pad name="D-" x="3.9" y="0.8" drill="0.8" diameter="1.143"/>
-<pad name="ID" x="3.9" y="-0.8" drill="0.8" diameter="1.143"/>
-<pad name="P$6" x="0" y="-3.65" drill="1.9" diameter="2.667"/>
-<pad name="P$7" x="0" y="3.65" drill="1.9" diameter="2.667"/>
+<pad name="VBUS" x="5.1" y="1.6" drill="0.7" diameter="1.1" shape="offset"/>
+<pad name="D+" x="5.1" y="0" drill="0.7" diameter="1.1" shape="offset"/>
+<pad name="GND" x="5.1" y="-1.6" drill="0.7" diameter="1.1" shape="offset"/>
+<pad name="D-" x="3.9" y="0.8" drill="0.7" diameter="1.1" shape="offset" rot="R180"/>
+<pad name="ID" x="3.9" y="-0.8" drill="0.7" diameter="1.1" shape="offset" rot="R180"/>
+<pad name="P$6" x="0" y="-3.65" drill="1.8" diameter="2.7"/>
+<pad name="P$7" x="0" y="3.65" drill="1.8" diameter="2.7"/>
 <text x="7.25" y="1.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <rectangle x1="3.25" y1="3" x2="5.75" y2="4.4" layer="43"/>
 <rectangle x1="3.25" y1="-4.4" x2="5.75" y2="-3" layer="43"/>
@@ -7875,7 +7875,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="17.78" y="7.62" size="1.778" layer="97">Objective Development</text>
 <text x="2.54" y="5.08" size="1.778" layer="97">Altered by SparkFun Electronics (Ryan Owens)</text>
 <text x="149.86" y="27.94" size="5.08" layer="91">XO Stick</text>
-<text x="241.3" y="7.62" size="2.54" layer="91">10</text>
+<text x="241.3" y="7.62" size="2.54" layer="91">11</text>
 <text x="149.86" y="162.56" size="1.778" layer="91"># RIGHT MOTOR 1</text>
 <text x="149.86" y="152.4" size="1.778" layer="91"># SERVO</text>
 <text x="149.86" y="149.86" size="1.778" layer="91"># LEFT MOTOR 1</text>
