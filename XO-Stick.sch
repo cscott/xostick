@@ -6664,6 +6664,21 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <wire x1="0.1546" y1="0.0254" x2="-0.14" y2="0.2184" width="0.2032" layer="21"/>
 <circle x="0.8636" y="1.0668" radius="0.127" width="0.2032" layer="21"/>
 </package>
+<package name="SJ-2S-BOT-TRACE-NOCONFLICT-PAD">
+<wire x1="-0.8255" y1="-1.016" x2="0.8255" y2="-1.016" width="0.2032" layer="52"/>
+<wire x1="-0.8255" y1="1.016" x2="-1.0795" y2="0.762" width="0.2032" layer="52" curve="90"/>
+<wire x1="1.0795" y1="0.762" x2="0.8255" y2="1.016" width="0.2032" layer="52" curve="90"/>
+<wire x1="1.0795" y1="-0.762" x2="0.8255" y2="-1.016" width="0.2032" layer="52" curve="-90"/>
+<wire x1="-0.8255" y1="-1.016" x2="-1.0795" y2="-0.762" width="0.2032" layer="52" curve="-90"/>
+<wire x1="0.8255" y1="1.016" x2="-0.8255" y2="1.016" width="0.2032" layer="52"/>
+<wire x1="-0.2286" y1="0" x2="0.2286" y2="0" width="0.254" layer="100"/>
+<smd name="1" x="-0.508" y="0" dx="0.635" dy="1.27" layer="16" rot="R180" stop="no" cream="no"/>
+<smd name="2" x="0.508" y="0" dx="0.635" dy="1.27" layer="16" rot="R180" stop="no" cream="no"/>
+<text x="0.9525" y="1.27" size="0.4064" layer="26" rot="MR0">&gt;NAME</text>
+<text x="0.9525" y="-1.651" size="0.4064" layer="28" rot="MR0">&gt;VALUE</text>
+<rectangle x1="-0.9144" y1="-0.7112" x2="0.9144" y2="0.7112" layer="30" rot="R180"/>
+<rectangle x1="-0.2032" y1="-0.635" x2="0.2032" y2="0.635" layer="42" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ARDUINO-SHIELD">
@@ -6952,6 +6967,15 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <technology name=""/>
 </technologies>
 </device>
+<device name="SJ-NC-BOT" package="SJ-2S-BOT-TRACE-NOCONFLICT-PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="SOLDERJUMPER">
@@ -6989,6 +7013,15 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <device name="BOT-VIA-NOCONFLICT" package="SJ-2S-BOT-TRACE-VIA-NOCONFLICT">
 <connects>
 <connect gate="G$1" pin="1" pad="1 VIA6"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="BOT-NOCONFLICT-PAD" package="SJ-2S-BOT-TRACE-NOCONFLICT-PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
@@ -7810,7 +7843,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="J8" library="xorduino" deviceset="SOLDERJUMPER" device="BOT-NOCONFLICT" value="AGND (N/C)"/>
 <part name="X2" library="xorduino" deviceset="USB" device="MINIB"/>
 <part name="GND11" library="SparkFun-2" deviceset="GND" device=""/>
-<part name="P+8" library="SparkFun" deviceset="VCC" device=""/>
 <part name="D1" library="SparkFun" deviceset="DIODE-ZENER" device="PTH" value="3V3"/>
 <part name="D2" library="SparkFun" deviceset="DIODE-ZENER" device="PTH" value="3V3"/>
 <part name="SW1" library="SparkFun" deviceset="TAC_SWITCH" device="PTH" value="USER"/>
@@ -7833,8 +7865,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="J2" library="xorduino" deviceset="JUMPER-2" device="SJ-NO" value="85MOTR"/>
 <part name="J3" library="xorduino" deviceset="JUMPER-2" device="SJ-NO" value="85MOTL"/>
 <part name="J4" library="xorduino" deviceset="JUMPER-2" device="SJ-NO" value="REF"/>
-<part name="J5" library="xorduino" deviceset="JUMPER-2" device="SJ-NO" value="SCL"/>
-<part name="J6" library="xorduino" deviceset="JUMPER-2" device="SJ-NO" value="SDA"/>
+<part name="J5" library="xorduino" deviceset="JUMPER-2" device="SJ-NC-BOT" value="SCL"/>
+<part name="J6" library="xorduino" deviceset="JUMPER-2" device="SJ-NC-BOT" value="SDA"/>
+<part name="J9" library="xorduino" deviceset="SOLDERJUMPER" device="BOT-NOCONFLICT-PAD" value="EXT VCC"/>
 </parts>
 <sheets>
 <sheet>
@@ -7842,7 +7875,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="17.78" y="7.62" size="1.778" layer="97">Objective Development</text>
 <text x="2.54" y="5.08" size="1.778" layer="97">Altered by SparkFun Electronics (Ryan Owens)</text>
 <text x="149.86" y="27.94" size="5.08" layer="91">XO Stick</text>
-<text x="241.3" y="7.62" size="2.54" layer="91">7</text>
+<text x="241.3" y="7.62" size="2.54" layer="91">8</text>
 <text x="149.86" y="162.56" size="1.778" layer="91"># RIGHT MOTOR 1</text>
 <text x="149.86" y="152.4" size="1.778" layer="91"># SERVO</text>
 <text x="149.86" y="149.86" size="1.778" layer="91"># LEFT MOTOR 1</text>
@@ -7871,14 +7904,14 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="40.64" y1="152.4" x2="40.64" y2="154.94" width="0.1524" layer="97"/>
 <wire x1="40.64" y1="154.94" x2="43.18" y2="154.94" width="0.1524" layer="97"/>
 <text x="58.674" y="115.062" size="1.016" layer="91" align="bottom-center">Close jumpers to drive motors from '85</text>
-<text x="158.496" y="135.636" size="1.016" layer="91">Close jumpers to disable USB and use I2C</text>
+<text x="158.496" y="135.636" size="1.016" layer="91">Open N/C jumpers to separate I2C from USB</text>
 <text x="12.7" y="144.78" size="1.016" layer="91">XO Stick to be programmed has JP1 on "Programming"</text>
 <text x="12.7" y="142.24" size="1.016" layer="91">Programmer has JP1 on "Normal"</text>
 <text x="12.7" y="139.7" size="1.016" layer="91">When driving XOrdiuno, JP1 on "Robot Backpack"</text>
 <text x="104.14" y="134.62" size="1.016" layer="91" align="bottom-right">Close jumper to use AREF on a shield</text>
 <text x="58.674" y="112.522" size="1.016" layer="91" align="bottom-center">XXX: candidate for deletion</text>
 <text x="104.14" y="132.08" size="1.016" layer="91" align="bottom-right">XXX: candidate for deletion</text>
-<text x="158.496" y="133.096" size="1.016" layer="91">XXX: candidate for deletion</text>
+<text x="158.496" y="133.096" size="1.016" layer="91">(needs to be closed to program XO Stick from XOrduino)</text>
 <text x="38.1" y="27.94" size="1.778" layer="91">Can subsitute '461, but USB stack won't fit in '261</text>
 <text x="109.22" y="93.98" size="1.778" layer="91">Can substitute '45, but</text>
 <text x="109.22" y="91.44" size="1.778" layer="91">USB stack won't fit in '25</text>
@@ -7894,7 +7927,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="GND6" gate="1" x="233.68" y="157.48"/>
 <instance part="P+3" gate="1" x="172.72" y="121.92"/>
 <instance part="GND7" gate="1" x="198.12" y="93.98"/>
-<instance part="P+1" gate="1" x="198.12" y="114.3"/>
+<instance part="P+1" gate="1" x="198.12" y="127"/>
 <instance part="R3" gate="G$1" x="172.72" y="114.3" rot="R90"/>
 <instance part="R2" gate="G$1" x="165.1" y="101.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="160.528" y="102.616" size="1.778" layer="95"/>
@@ -7933,7 +7966,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </instance>
 <instance part="X2" gate="G$1" x="228.6" y="99.06"/>
 <instance part="GND11" gate="1" x="210.82" y="93.98"/>
-<instance part="P+8" gate="1" x="210.82" y="114.3"/>
 <instance part="D1" gate="G$1" x="177.8" y="81.28" rot="R90"/>
 <instance part="D2" gate="G$1" x="185.42" y="81.28" rot="R90"/>
 <instance part="SW1" gate="S" x="157.48" y="121.92"/>
@@ -7958,6 +7990,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="J4" gate="G$1" x="96.52" y="139.7"/>
 <instance part="J5" gate="G$1" x="142.24" y="139.7"/>
 <instance part="J6" gate="G$1" x="142.24" y="132.08" rot="MR180"/>
+<instance part="J9" gate="G$1" x="198.12" y="119.38" smashed="yes" rot="R90">
+<attribute name="NAME" x="201.93" y="116.84" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="204.978" y="117.094" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7991,12 +8027,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="P+6" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="200.66" y1="101.6" x2="198.12" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="198.12" y1="101.6" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="VBUS"/>
-<pinref part="P+1" gate="1" pin="VCC"/>
-</segment>
-<segment>
 <wire x1="12.7" y1="43.18" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="48.26" x2="12.7" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="48.26" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
@@ -8006,17 +8036,15 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="J7" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="226.06" y1="101.6" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="101.6" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
-<label x="213.36" y="101.6" size="1.778" layer="95"/>
-<pinref part="X2" gate="G$1" pin="VBUS"/>
-<pinref part="P+8" gate="1" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="P+9" gate="1" pin="VCC"/>
 <pinref part="J1" gate="G$1" pin="C"/>
 <wire x1="88.9" y1="152.4" x2="88.9" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="147.32" x2="86.36" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+1" gate="1" pin="VCC"/>
+<pinref part="J9" gate="G$1" pin="2"/>
+<wire x1="198.12" y1="127" x2="198.12" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -8514,6 +8542,20 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="226.06" y1="104.14" x2="213.36" y2="104.14" width="0.1524" layer="91"/>
 <label x="213.36" y="104.14" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="D-"/>
+</segment>
+</net>
+<net name="VBUS" class="1">
+<segment>
+<wire x1="200.66" y1="101.6" x2="198.12" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="VBUS"/>
+<pinref part="J9" gate="G$1" pin="1"/>
+<wire x1="198.12" y1="101.6" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="101.6" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="101.6" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
+<label x="213.36" y="101.6" size="1.778" layer="95"/>
+<pinref part="X2" gate="G$1" pin="VBUS"/>
+<wire x1="198.12" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
+<junction x="198.12" y="114.3"/>
 </segment>
 </net>
 </nets>

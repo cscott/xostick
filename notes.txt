@@ -24,3 +24,23 @@ where T indicates tabs.
   XOrduino board.  (ie, move connector all the way down)
   (but retain 1.9" max width and spacing between USB port and edge to
   allow plugging XO Stick into vertical USB port on XO)
+
+- J5/J6 should be normally-closed.
+
+- EC programming header: 3.3v conversion (zeners?)
+I was just looking at you pinout to check.  :)  Your pinout is close
+but you don't have a chip select at all.  Its required for both the
+EDI and talking to the SPI flash and there isn't a ground connection
+in your pinout.
+
+Look at the schematics in the dev docs cl4 directory. The same pinout
+is used for both the EC EDI connection and the header for programming
+the SPI flash.
+
+Pin 1: MISO
+Pin 2: Vcc (3.3V or NC for EC)
+Pin 3: SCLK
+Pin 4: MOSI
+Pin 5: CS#
+Pin 6: GND
+
