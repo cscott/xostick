@@ -7875,7 +7875,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="17.78" y="7.62" size="1.778" layer="97">Objective Development</text>
 <text x="2.54" y="5.08" size="1.778" layer="97">Altered by SparkFun Electronics (Ryan Owens)</text>
 <text x="149.86" y="27.94" size="5.08" layer="91">XO Stick</text>
-<text x="241.3" y="7.62" size="2.54" layer="91">8</text>
+<text x="241.3" y="7.62" size="2.54" layer="91">9</text>
 <text x="149.86" y="162.56" size="1.778" layer="91"># RIGHT MOTOR 1</text>
 <text x="149.86" y="152.4" size="1.778" layer="91"># SERVO</text>
 <text x="149.86" y="149.86" size="1.778" layer="91"># LEFT MOTOR 1</text>
