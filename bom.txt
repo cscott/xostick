@@ -1,3 +1,5 @@
+XXX for v12: U3 497-7288-ND $0.21000 qty 100
+
 Bill of Materials (v5)
 Prices are from digikey, and in quantity 100.
 ---------------------------------------------

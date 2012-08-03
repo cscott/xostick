@@ -8126,7 +8126,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <text x="17.78" y="7.62" size="1.778" layer="97">Objective Development</text>
 <text x="2.54" y="5.08" size="1.778" layer="97">Altered by SparkFun Electronics (Ryan Owens)</text>
 <text x="149.86" y="27.94" size="5.08" layer="91">XO Stick</text>
-<text x="241.3" y="7.62" size="2.54" layer="91">12</text>
+<text x="241.3" y="7.62" size="2.54" layer="91">13</text>
 <text x="149.86" y="162.56" size="1.778" layer="91"># RIGHT MOTOR 1</text>
 <text x="149.86" y="152.4" size="1.778" layer="91"># SERVO</text>
 <text x="149.86" y="149.86" size="1.778" layer="91"># LEFT MOTOR 1</text>
@@ -8160,12 +8160,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <text x="12.7" y="142.24" size="1.016" layer="91">Programmer has JP1 on "Normal"</text>
 <text x="12.7" y="139.7" size="1.016" layer="91">When driving XOrdiuno, JP1 on "Robot Backpack"</text>
 <text x="104.14" y="134.62" size="1.016" layer="91" align="bottom-right">Close jumper to use AREF on a shield</text>
-<text x="58.674" y="112.522" size="1.016" layer="91" align="bottom-center">XXX: candidate for deletion</text>
-<text x="104.14" y="132.08" size="1.016" layer="91" align="bottom-right">XXX: candidate for deletion</text>
 <text x="158.496" y="133.096" size="1.016" layer="91">(needs to be closed to program XO Stick from XOrduino)</text>
 <text x="38.1" y="27.94" size="1.778" layer="91">Can subsitute '461, but USB stack won't fit in '261</text>
 <text x="109.22" y="93.98" size="1.778" layer="91">Can substitute '45, but</text>
 <text x="109.22" y="91.44" size="1.778" layer="91">USB stack won't fit in '25</text>
+<text x="206.756" y="143.256" size="1.016" layer="91">Populate U3 and cut J9 if 3.3V I/O is needed</text>
+<text x="206.756" y="140.716" size="1.016" layer="91">(for example, for XO unbricking)</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="124.46" y="106.68"/>
@@ -8480,7 +8480,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="X2" gate="G$1" pin="D+"/>
 </segment>
 </net>
-<net name="D1" class="0">
+<net name="PB1" class="0">
 <segment>
 <wire x1="142.24" y1="104.14" x2="149.86" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="104.14" x2="149.86" y2="96.52" width="0.1524" layer="91"/>
@@ -8504,7 +8504,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="H1" gate="G$1" pin="*D5"/>
 </segment>
 </net>
-<net name="D3" class="0">
+<net name="PB3" class="0">
 <segment>
 <wire x1="142.24" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="109.22" x2="157.48" y2="96.52" width="0.1524" layer="91"/>
@@ -8523,7 +8523,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="H1" gate="G$1" pin="*D10"/>
 </segment>
 </net>
-<net name="D4" class="0">
+<net name="PB4" class="0">
 <segment>
 <wire x1="73.66" y1="68.58" x2="81.28" y2="68.58" width="0.1524" layer="91"/>
 <label x="76.2" y="68.58" size="1.778" layer="95"/>
