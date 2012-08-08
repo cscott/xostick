@@ -6717,8 +6717,8 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <pin name="GND@1" x="-12.7" y="-22.86" visible="pin" length="short"/>
 <pin name="GND@0" x="-12.7" y="-25.4" visible="pin" length="short"/>
 <pin name="3.3V" x="-12.7" y="-7.62" visible="pin" length="short"/>
-<pin name="SCL" x="12.7" y="-22.86" visible="pin" length="short" rot="R180"/>
-<pin name="SDA" x="12.7" y="-25.4" visible="pin" length="short" rot="R180"/>
+<pin name="SCL" x="12.7" y="-25.4" visible="pin" length="short" rot="R180"/>
+<pin name="SDA" x="12.7" y="-22.86" visible="pin" length="short" rot="R180"/>
 <pin name="IOREF" x="-12.7" y="-12.7" visible="pin" length="short"/>
 <pin name="RFU" x="-12.7" y="-15.24" visible="pin" length="short"/>
 </symbol>
@@ -8239,8 +8239,8 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="J2" gate="G$1" x="50.8" y="124.46"/>
 <instance part="J3" gate="G$1" x="63.5" y="124.46"/>
 <instance part="J4" gate="G$1" x="96.52" y="139.7"/>
-<instance part="J5" gate="G$1" x="142.24" y="139.7"/>
-<instance part="J6" gate="G$1" x="142.24" y="132.08" rot="MR180"/>
+<instance part="J5" gate="G$1" x="142.24" y="132.08" rot="MR180"/>
+<instance part="J6" gate="G$1" x="142.24" y="139.7"/>
 <instance part="J9" gate="G$1" x="198.12" y="119.38" smashed="yes" rot="R90">
 <attribute name="NAME" x="201.93" y="116.84" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="204.978" y="117.094" size="1.778" layer="96" rot="R90"/>
@@ -8434,9 +8434,9 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="U2" gate="G$1" pin="(SCK/SCL/!OC1B!)PB2"/>
 </segment>
 <segment>
-<wire x1="157.48" y1="137.16" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
-<label x="149.86" y="137.16" size="1.778" layer="95"/>
-<wire x1="149.86" y1="137.16" x2="144.78" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="134.62" x2="149.86" y2="134.62" width="0.1524" layer="91"/>
+<label x="149.86" y="134.62" size="1.778" layer="95"/>
+<wire x1="149.86" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -8458,8 +8458,8 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="U2" gate="G$1" pin="(MOSI/DI/SDA/!OC1A!)PB0"/>
 </segment>
 <segment>
-<wire x1="157.48" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91"/>
-<label x="149.86" y="134.62" size="1.778" layer="95"/>
+<wire x1="157.48" y1="137.16" x2="144.78" y2="137.16" width="0.1524" layer="91"/>
+<label x="149.86" y="137.16" size="1.778" layer="95"/>
 <pinref part="J6" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -8744,14 +8744,14 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <net name="SCL" class="0">
 <segment>
 <pinref part="H1" gate="G$1" pin="SCL"/>
-<wire x1="137.16" y1="137.16" x2="142.24" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="134.62" x2="142.24" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="H1" gate="G$1" pin="SDA"/>
-<wire x1="137.16" y1="134.62" x2="142.24" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="137.16" x2="142.24" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="J6" gate="G$1" pin="1"/>
 </segment>
 </net>
