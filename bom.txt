@@ -47,3 +47,22 @@ which is substantially less than DigiKey, even though
 SparkFun is selling at retail markup.  Presumably a large
 deployment could get an even better wholesale price.
 The DigiKey headers are also not stackable.)
+
+----
+Paste-able BOM for the required+recommended parts ('861 version):
+(use https://ordering.digikey.com/registereduser/TextFileImport.aspx)
+
+Required: (pick 1 of U1/U2)
+1,493-5946-ND,C1 10uF
+1,478-5741-ND,C2 0.1uF
+2,1N5226BFSCT-ND,D1 D2 3.3V Zener
+2,CF14JT68R0CT-ND,R1 R2 68 ohm
+1,CF14JT1K50CT-ND,R3 1.5k ohm
+1,ATTINY85-20PU-ND,U1
+1,ATTINY861-20PU-ND,U2
+
+Recommended:
+1,754-1217-ND,LED1 T1 Green
+1,754-1218-ND,LED2 T1 Red
+2,CF14JT470RCT-ND,R4 R4 470 ohm
+1,450-1652-ND,SW1 6mm
