@@ -1,3 +1,10 @@
+Notes on v14:
+- LEDs should be labelled red/green in addition to LED1/LED2
+- 10uF cap needs more space if XO Stick is to be used as shield
+  (replaced with 6mm high cap in BOM, for $0.02 cost up)
+- PROG/BOT header is too tight.  Vin header is ok?
+- Vin and proto area vias should have larger pads
+
 Notes on v9:
 - usb connector up toward notch a little bit?  binding on bottom side.
   (moved 10 mil up for v10, chamfered bottom corner as well)
@@ -47,4 +54,3 @@ Pin 3: SCLK
 Pin 4: MOSI
 Pin 5: CS#
 Pin 6: GND
-
