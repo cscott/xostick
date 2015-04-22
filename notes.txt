@@ -4,6 +4,13 @@ Notes on v14:
   (replaced with 6mm high cap in BOM, for $0.02 cost up)
 - PROG/BOT header is too tight.  Vin header is ok?
 - Vin and proto area vias should have larger pads
+- pf says holes are in general too small for used parts.  make them
+  all the same size as the proto area?
+- measure tabs.  maybe too think now that there's solder resist and
+  copper on it?
+- add [outside] gnd, vcc, sig1, sig2 [inside] for mounting grove-style
+  connectors? pgf wants [gnd, vcc, open] pattern somewhere for wiring
+  connectors.
 
 Notes on v9:
 - usb connector up toward notch a little bit?  binding on bottom side.
